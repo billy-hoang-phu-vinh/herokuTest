@@ -37,7 +37,6 @@ app.post("/signIn_Form",(req,res)=> {
 app.get("/",(req,res)=> {
 
     //using handlebar-> render
-    console.log('suc');
     res.render("s",{
         //param for $handlebar
         title: "Signin webite",
