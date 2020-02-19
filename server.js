@@ -54,5 +54,5 @@ app.get('*',(req,res)=> {
 });
 
 //listen port
-const port =process.env.PORT || 3000;
+const port =process.env.PORT||3000;
 app.listen(port,()=> {console.log(`web start successfully`);});
