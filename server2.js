@@ -1,3 +1,4 @@
+//test comment here
 //require express, require express handlebars
 const express = require("express");
 const exphdb = require("express-handlebars");
@@ -38,7 +39,7 @@ app.get("/",(req,res)=> {
     console.log('ef');
     //using handlebar-> render
     res.render("s",{
-        //param forwdwdw $handlebar
+        //param for $handlebar
         title: "Signin webite",
         PARAM: fake_data_called.getthisfakeData()
     });
