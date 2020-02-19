@@ -43,7 +43,15 @@ app.get("/",(req,res)=> {
         PARAM: fake_data_called.getthisfakeData()
     });
 });
-
+app.get("/backup",(req,res)=> {
+    console.log('ef');
+    //using handlebar-> render
+    res.render("s",{
+        //param forwdwdw $handlebar
+        title: "Signin webite",
+        PARAM: fake_data_called.getthisfakeData()
+    });
+});
 //listen port
 const port = 3000 || process.env.PORT;
 app.listen(port,()=> {console.log('web start successfully');});
