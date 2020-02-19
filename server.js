@@ -1,11 +1,11 @@
 //require express, require express handlebars
 const express = require("express");
-const exphdb = require("express-handlebars");
+const exphdb = require('express-handlebars');
 const app = express();//call constructor ?
  
 //set engine for view handle bar
-app.engine("handlebars",exphdb());
-app.set("view engine","handlebars");//middleware?
+app.engine('handlebars',exphdb());
+app.set('view engine','handlebars');//middleware?
 //html css javascript
 app.use(express.static("public"));//for css and sources
 //for javascript
@@ -43,7 +43,7 @@ app.get("/",(req,res)=> {
         PARAM: fake_data_called.getthisfakeData()
     });
 });
-app.get("/backup",(req,res)=> {
+app.get('*',(req,res)=> {
     console.log('ef');
     //using handlebar-> render
     res.render("s",{
@@ -52,6 +52,7 @@ app.get("/backup",(req,res)=> {
         PARAM: fake_data_called.getthisfakeData()
     });
 });
+
 //listen port
 const port =process.env.PORT || 3000;
-app.listen(port,()=> {console.log('web start successfully');});
+app.listen(port,()=> {console.log(`web start successfully`);});
