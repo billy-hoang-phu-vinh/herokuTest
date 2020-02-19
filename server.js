@@ -53,5 +53,5 @@ app.get("/backup",(req,res)=> {
     });
 });
 //listen port
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT;
 app.listen(port,()=> {console.log('web start successfully');});
